@@ -66,16 +66,15 @@ taskSubmit.addEventListener('click',()=>{
 	 check.style="float: left;  margin-top:1.7em;margin-left:1.5em;height:1.3rem;width:1.3rem;"
 
 	 var tid=document.createElement('p');
-	 tid.style="float: left;margin-top:1rem;margin-left:1em;font-size: 25px;"
+	 tid.style="float:left;margin-top:1rem;margin-left:1em;font-size:25px;"
 	 tid.textContent=taskValue(TASKID.toString());
 
 	 var tname=document.createElement('p');
-	 tname.style="float: left;margin-top:1rem;margin-left:1em;font-size: 25px;background-color:blue;width:25px;"
-	//  tname.textContent=taskName.value;
-	tname.textContent="jatinagrawal";
+	 tname.style="float:left;margin-top:1rem;margin-left:1em;font-size:25px;width:19%;text-align:center;";
+	tname.textContent=taskName.value;
 
 	var tstatus=document.createElement('select')
-	tstatus.style=" margin-top:1.3em;margin-left:3em;font-size: 16px;"
+	tstatus.style=" margin-top:1.3em;margin-left:3em;font-size: 16px;width:19%;text-align:center;"
 	var options=["Not Started","In progress","In Review","Completed","Cancelled"];
 
 	for(let i=0;i<5;i++)
@@ -88,11 +87,11 @@ taskSubmit.addEventListener('click',()=>{
 
 	var due=document.createElement('input');
 	due.setAttribute('type','date');
-	due.style="margin-left:4em;font-size: 15px;"
+	due.style="margin-left:4em;font-size: 15px;width:20%;text-align:center;"
 	due.value=taskDue.value;
 
 	var priority=document.createElement('select')
-	priority.style=" margin-left:4em;font-size: 15px;"
+	priority.style=" margin-left:4em;font-size: 15px;width:19%;text-align:center;"
 	
 	
 	var prio=["Top","Middle","Last"];
@@ -137,7 +136,7 @@ function checkKeyPress(event)
 	}
 }
 
-
+/*
 var docWidth = document.documentElement.offsetWidth;
 
 [].forEach.call(
@@ -148,3 +147,5 @@ var docWidth = document.documentElement.offsetWidth;
     }
   }
 );
+
+*/

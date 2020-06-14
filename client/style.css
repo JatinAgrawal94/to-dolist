@@ -184,25 +184,22 @@ nav{
 
 #head-section{
 	position: fixed;
-	width:97.3%;
+	width:100%;
 	top:9.48em;
 	height:2em;
 	background-color: #9933FF;
 	float:left;
 	z-index: 1;
 	display: flex;
+	padding: 0;
 }
 
 #head-section li{
 	color:black;
-	float:left;
 	font-size:25px;
-	width:15%;
 }
 
-
-
-/*			POPUP BEGINS HERE    */
+/*POPUP BEGINS HERE*/
 
 #popup{
 	width:83%;
