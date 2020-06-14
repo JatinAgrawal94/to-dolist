@@ -81,7 +81,7 @@ nav{
 
 #search{
 	float:left;
-	width:100%;
+	width:99.5%;
 	height:2.5em;
 	background-color: rgb(241,241,241);
 	top:5.2em;
@@ -100,7 +100,7 @@ nav{
 				/* SIDE BAR CSS BEGINS HERE*/
 
 #sidebar{
-	width:15em;
+	width:15%;
 	height:100%;
 	z-index:3;
 	position:fixed;
@@ -164,7 +164,7 @@ nav{
 		/*  ADD TASK BEGINS HERE*/
 #add{
 	z-index:1;
-	width:100%;
+	width:99.5%;
 	position:fixed;
 	background-color: rgb(245,245,245);
 	top:8.7em;
@@ -184,7 +184,7 @@ nav{
 
 #head-section{
 	position: fixed;
-	width:100%;
+	width:97.3%;
 	top:9.48em;
 	height:2em;
 	background-color: #9933FF;
@@ -197,7 +197,7 @@ nav{
 	color:black;
 	float:left;
 	font-size:25px;
-	width:26%;
+	width:15%;
 }
 
 
@@ -211,9 +211,10 @@ nav{
 	background-color: white;
 	border:2px solid black;
 	position:absolute;
-	top:4em;
-	left:8%;
+	top:7em;
+	left:10%;
 	display: none;
+	margin:0;
 }
         /* popup heading */
 #pop-head{
@@ -256,17 +257,17 @@ nav{
 }
 
 #row1 input,#row2 input{
-    width: 20em;
+    width: 23%;
     height:3em;
 }
 
 #row3 input{
-    width:20em;
+    width:23%;
     height:7em;
 }
 
 #row2 select{
-    width:20em;
+    width:23%;
     height:3em;
     margin-right:5em;
     margin-left:2em;
@@ -305,7 +306,7 @@ nav{
 			/*  POPUP ENDS HERE*/
 
 #task-area{
-	width:100%;
+	width:97.5%;
 	height:100%;
 	background-color: green;
 	z-index:0;
