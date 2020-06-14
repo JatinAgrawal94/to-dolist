@@ -10,16 +10,16 @@ var filterBar=document.getElementById('filter-bar')
 var addTask=document.getElementById('add')
 
 // task id values
-
+taskId
 
 // Popup declarations
 var popUp=document.getElementById('popup')
 var popExit=document.getElementById('pop-exit')
-// var taskName=document.getElementById('task-name')
-// var taskDue=document.getElementById('task-due')
-// var taskType=document.getElementById('task-type')
-// var taskPrio=document.getElementById('task-prio')
-// var taskDesc=document.getElementById('task-desc')
+var taskName=document.getElementById('task-name')
+var taskDue=document.getElementById('task-due')
+var taskType=document.getElementById('task-type')
+var taskPrio=document.getElementById('task-prio')
+var taskDesc=document.getElementById('task-desc')
 var taskSubmit=document.getElementById('task-submit')
 var taskArea=document.getElementById('task-area')
 
@@ -31,6 +31,7 @@ addTask.addEventListener('click',()=>{   // addtask button listener
 popExit.addEventListener('click',()=>{  //popup exit button
 	popUp.style="display:none;"
 })
+
 
 
 navBut.addEventListener('click',()=>{
@@ -61,10 +62,10 @@ taskSubmit.addEventListener('click',()=>{
 
 	 var tname=document.createElement('p');
 	 tname.style="float: left;margin-top:1rem;margin-left:1em;font-size: 25px;"
-	 tname.textContent="jatinagrawal"
+	 tname.textContent=taskName.value;
 
 	var tstatus=document.createElement('select')
-	tstatus.value="taskstatus"
+	tstatus.value=
 	tstatus.style=" margin-top:1.3em;margin-left:3em;font-size: 16px;"
 	var options=["Not Started","In progress","In Review","Completed","Cancelled"];
 
@@ -78,28 +79,34 @@ taskSubmit.addEventListener('click',()=>{
 	}
 	
 
-	// var due=document.createElement('input');
-	// due.setAttribute('type','date');
-	// due.style="margin-left:4em;font-size: 15px;"
+	var due=document.createElement('input');
+	due.setAttribute('type','date');
+	due.style="margin-left:4em;font-size: 15px;"
 
 
-	// var priority=document.createElement('select')
-	// priority.style=" margin-left:4em;font-size: 15px;"
+	var priority=document.createElement('select')
+	priority.style=" margin-left:4em;font-size: 15px;"
 
-	// var p=document.createElement("option")
-	// var prio=["Not Started","In progress","In Review","Completed","Cancelled"];
-	// for(let i=0;i<4;i++)
-	// {
-	// 	p.textContent(prio[i]);
-	// 	priority.appendChild(p);
-	// }
+	
+	var prio=["Top","Middle","Last"];
 
-	 box.appendChild(check);
+	for(let i=0;i<3;i++)
+	{
+		var p=document.createElement("option")
+		p.textContent=prio[i];
+		priority.appendChild(p);
+	}
+
+	var del=document.createElement('a');
+	del.appendChild
+
+
+	box.appendChild(check);
 	box.appendChild(tid);
 	box.appendChild(tname);
 	box.appendChild(tstatus);
-	// box.appendChild(due);
-	// box.appendChild(priority);
+	box.appendChild(due);
+	box.appendChild(priority);
 	taskArea.appendChild(box);
 	popUp.style="display:none;"
 })
