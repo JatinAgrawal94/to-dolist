@@ -1,0 +1,123 @@
+<!-- <html>
+    <head>
+        <title>jatin</title>
+
+        <style>
+            html{
+                width: 100%;
+                height:100%;
+            }
+            body{
+                margin:0;
+                width: 100%;
+                height:100%;
+            }
+            #box{
+                float: left;
+                background-color: yellow;
+                width:83%;
+                height:4em;
+                border:2px solid black;
+            }
+            #check{
+                float: left;  
+                margin-top:1.7em;
+                margin-left:1.5em;    
+                height:1.3rem;
+                width:1.3rem;     
+            }
+
+            #taskid{
+                float: left;
+                margin-top:1rem;
+                margin-left:1em;
+                font-size: 25px;
+            }
+
+            #taskname{
+                float: left;
+                margin-top:1rem;
+                margin-left:1em;
+                font-size: 25px;
+            }
+            #task-status{
+                margin-top:1.3em;
+                margin-left:3em;
+                font-size: 16px;
+            }
+            #due-date{
+                margin-left:4em;
+                font-size: 15px;    
+            }
+
+            #priority{
+                margin-left:4em;
+                font-size: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+            <div id="box">
+                <input type="checkbox" id="check">
+                <p id="taskid">0003</p>
+                <p id="taskname">jatinagrawal</p>
+                <select name="" id="task-status"> 
+                    <option value="" style="background-color: red;">Not Started</option>
+                    <option value="">In Progress</option>
+                    <option value="">In Review</option>
+                    <option value="">Completed</option>
+                    <option value="">Cancelled</option>
+                </select>
+                <input type="date" id="due-date">
+                <select name="" id="priority">
+                    <option value="">Critical</option>
+                    <option value="">High</option>
+                    <option value="">Medium</option>
+                    <option value="">Low</option>
+                </select>
+            </div>
+    </body>
+</html> -->
+
+<link rel="stylesheet" type="text/css" href="test.css">
+<form id="popup">
+          		<div id="pop-head">
+          			<p id="heading">Task Details</p>
+          			<a id="pop-exit" href="#">X</a>
+                  </div>
+                  
+                        <!-- POP-BODY BEGINS HERE -->
+          			 <div id="pop-body">
+                        <div id="row1">
+                            
+                              <label>Task:</label>
+                              <input type="text" name="" id="task-name" placeholder="Taskname">
+                            
+                            
+                              <input type="date" name="" style="float:right;" placeholder="DueDate" id="task-due">
+                              <label style="float:right;" id="due-label">Due Date:</label>
+                            
+                        </div>
+                        
+                        <div id="row2">
+                            <label>Task Type:</label><input type="text" name="" placeholder="Tasktype" id="task-type">
+                            
+                              
+                              <select style="float:right;" id="task-prio">
+                                <option>Top</option>
+                                <option>Middle</option>
+                                <option>Last</option>
+                              </select>
+                              <label style="float:right;" id="prio-label">Priority:</label>
+                            
+                        </div>
+                        <div id="row3">
+                              <label>Description:</label><input type="text" name="" id="task-desc" placeholder="description">
+                        </div>
+                        <input type="submit" name="Submit" id="task-submit" value="Add">
+                     
+            </div>
+        
+		</form>  
+			<!-- POPUP ends here -->

@@ -1,0 +1,316 @@
+*::after,*::before{
+	box-sizing: border-box;
+}
+
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	width: 100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	background-color: rgb(17,17,17);
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+				/* NAVIGATION BAR CSS BEGINS HERE*/
+nav{
+	height:5em;
+	width:100%;
+	background-color: rgb(41,41,41);
+	border-bottom:0.15em solid rgb(221,221,221); 
+	position: fixed;
+	z-index:0;
+}
+
+#navstill{
+	position: fixed;
+	width:15em;
+	height:5em;
+	z-index:5;
+	float: left;
+	background-color: transparent;
+}
+#navbut{
+	position:relative;
+	z-index:5;	
+	margin-left:0.8em;
+	margin-top:0.5rem;
+	margin-right: 0;
+	float:left;
+	display: block;
+	padding:0;
+}
+#nav-span{
+	background-color:black;
+	height:0.4rem;
+	width:1em;
+	font-size: 2em;
+	margin-top:0.5rem;
+	margin-left:0;
+	margin-right:0;
+}
+
+#logo{
+	position:relative;
+	z-index:5;
+	font-size:2em;
+	margin-left:0.5em;
+	margin-top:0.5em;  
+	float: left;
+	color:red;
+}
+
+		/* NAVIGATION BAR CSS ENDS HERE*/
+
+#main-body{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 3;
+	background-color: rgb(17,17,17);
+}
+				/* SEARCH BOX CSS BEGINS HERE*/
+
+#search{
+	float:left;
+	width:100%;
+	height:2.5em;
+	background-color: rgb(241,241,241);
+	top:5.2em;
+	z-index: 1;
+	position: fixed;
+	border:0.1rem solid blue;
+	font-size:1em;
+	padding:0;
+}
+#search:hover{
+	-webkit-box-shadow: 0 0 10px #3366FF;
+        box-shadow: 0 0 10px #3366FF;
+}
+
+			/* SEARCH BOX CSS ENDS HERE*/
+				/* SIDE BAR CSS BEGINS HERE*/
+
+#sidebar{
+	width:15em;
+	height:100%;
+	z-index:3;
+	position:fixed;
+	background-color: rgb(17,17,17);
+	transition: all 500ms linear;
+	padding:0;
+	margin:0;
+	display:none;
+
+}
+
+#side-head{
+	background-color: rgb(41,41,41);
+	height:5em;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+#side-body{
+	height:100%;
+	width:100%;
+	background-color:black;
+	padding:0;
+	margin:0;
+}
+
+			/* SIDE BAR CSS ENDS HERE*/
+			/*  FILTER BAR BEGINS HERE*/
+#filter-bar{
+	position: fixed;
+	z-index:1;
+	top:8em;
+	float:left;
+	width:100%;
+	background-color: rgb(17,17,17);
+	display: flex;
+}
+
+#filter-bar a{
+	z-index:1;
+	background-color: white;
+	font-size:1.5em;
+	padding-top:0.2%;
+	padding-bottom:0.2%;
+	color:black;
+	border:0.1em solid rgb(125,197,255);
+	border-radius:16px;
+	margin:0;
+	float: left;
+	width:33%;	
+	text-align: center;
+}
+
+#filter-bar a:hover
+{
+	background-color: rgb(235,246,265);
+}
+				/* FILTER BAR ENDS HERE*/
+
+		/*  ADD TASK BEGINS HERE*/
+#add{
+	z-index:1;
+	width:100%;
+	position:fixed;
+	background-color: rgb(245,245,245);
+	top:8.7em;
+	color:black;
+	text-align: center;
+	padding-top:0.7em;
+	padding-bottom: 0.7em;
+	font-size:23px; 
+	border:0.15rem dashed green;
+	border-radius:2%;
+	
+}
+#add:hover{
+	background-color:#CCFFCC; 
+}
+		/*  ADD TASK ENDS HERE*/
+
+#head-section{
+	position: fixed;
+	width:100%;
+	top:9.48em;
+	height:2em;
+	background-color: #9933FF;
+	float:left;
+	z-index: 1;
+	display: flex;
+}
+
+#head-section li{
+	color:black;
+	float:left;
+	font-size:25px;
+	margin-left:9em;
+}
+
+
+
+/*			POPUP BEGINS HERE    */
+
+#popup{
+	width:83%;
+	height:37em;
+	z-index:50;
+	background-color: white;
+	border:2px solid black;
+	position:absolute;
+	top:4em;
+	left:8%;
+	display: none;
+}
+        /* popup heading */
+#pop-head{
+    float: left;
+    width:100%;
+    margin-top:0;
+    border-bottom:0.2rem solid black;
+    height:2.3em;
+    background-color: red   ;
+}
+#heading{
+    float: left;
+    font-size: 25px;
+    margin-top:0.05rem;
+    margin-left:45%;
+}
+#pop-exit{
+    float: right;
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+	border-radius:50%;
+    padding:0.1rem 0.5rem;
+    margin-top:0;
+}
+#pop-exit:hover{
+    background-color: rgb(221,221,221);
+}
+
+#pop-body{
+    font-size:20px;
+    padding-left:3em;
+    padding-right:3em;
+    margin-top:5em;
+}
+#row1,#row2{
+    margin-top:3em;
+    margin-bottom: 3em;
+}
+
+#row1 input,#row2 input{
+    width: 20em;
+    height:3em;
+}
+
+#row3 input{
+    width:20em;
+    height:7em;
+}
+
+#row2 select{
+    width:20em;
+    height:3em;
+    margin-right:5em;
+    margin-left:2em;
+}
+
+#task-name{
+    margin-left:4em;
+}
+
+#task-due{
+    margin-right:5em;
+    margin-left:2em;
+}
+#due-label{
+    margin-top:0.5rem;
+}
+
+#task-type{
+    margin-left:1em;
+}
+/* 
+#task-desc{
+
+} */
+
+#prio-label{
+    margin-top:.2em;
+}
+
+#task-submit{
+    width:25em;
+    height:2em;
+    margin-left:41%;
+}
+
+			/*  POPUP ENDS HERE*/
+
+#task-area{
+	width:100%;
+	height:100%;
+	background-color: green;
+	z-index:-55;
+	position:relative;
+	padding:2em 1em;
+	top:36%;
+	overflow-x: hidden;
+}

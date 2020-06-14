@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+	<title>sidebar</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<nav></nav>
+			<!-- LOGO -->
+	<div id="navstill">
+		<div id="navbut">
+			<div id="nav-span"></div>
+			<div id="nav-span"></div>
+			<div id="nav-span"></div>
+	</div>
+		<h1 id="logo">Time2Time</h1>
+	</div>
+			<!-- MAIN BODY DIV -->
+	<div id="main-body">
+		<div id="sidebar">
+			<div id="side-head"></div>
+			<div id="side-body"></div>
+		</div>
+				<!-- SEARCH INPUT TAG -->
+		<input type="text" name="" id="search" placeholder="Search">
+							<!-- FILTER BAR -->
+		<div id="filter-bar">
+			<a href="#" class="filter-link" >GroupBy</a>
+			<a href="#" class="filter-link" >SortBy</a>
+			<a href="#" class="filter-link" >Filter</a>
+		</div>
+
+					<!-- ADD BUTTON -->
+		<a href="#" id="add">+Add New Task</a>
+
+				<!-- HEAD SECTION -->
+		<ul id="head-section">
+			<li>Id</li>
+			<li>Task</li>
+			<li>Status</li>
+			<li>Due-date</li>
+			<li>Priority</li>
+		</ul>
+			<!-- POPUP begins here -->
+
+		<form id="popup">
+				<div id="pop-head">
+					<p id="heading">Task Details</p>
+					<a id="pop-exit" href="#">X</a>
+				</div>
+				
+					  <!-- POP-BODY BEGINS HERE -->
+					 <div id="pop-body">
+					  <div id="row1">
+						  
+							<label>Task:</label>
+							<input type="text" name="" id="task-name" placeholder="Taskname">
+						  
+						  
+							<input type="date" name="" style="float:right;" placeholder="DueDate" id="task-due">
+							<label style="float:right;" id="due-label">Due Date:</label>
+						  
+					  </div>
+					  
+					  <div id="row2">
+						  <label>Task Type:</label><input type="text" name="" placeholder="Tasktype" id="task-type">
+						  
+							
+							<select style="float:right;" id="task-prio">
+							  <option>Top</option>
+							  <option>Middle</option>
+							  <option>Last</option>
+							</select>
+							<label style="float:right;" id="prio-label">Priority:</label>
+						  
+					  </div>
+					  <div id="row3">
+							<label>Description:</label><input type="text" name="" id="task-desc" placeholder="description">
+					  </div>
+					  <input type="submit" name="Submit" id="task-submit" value="Add">  
+		  </div>
+	  
+	  </form>  
+		  <!-- POPUP ends here -->
+			
+	</div> 
+	<!-- main-body ends here -->
+	<div id="task-area"></div>
+	
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
