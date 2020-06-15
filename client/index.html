@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8">	
 	<meta name="viewport" content="width=device-width, intial-scale=1.0">
 	<title>sidebar</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -44,50 +44,46 @@
 			<li style="padding-left:7%;width:17%;">Due-date</li>
 			<li style="padding-left:7%;">Priority</li>
 		</ul>
-			<!-- POPUP begins here -->
-
-		<form id="popup">
-				<div id="pop-head">
-					<p id="heading">Task Details</p>
-					<a id="pop-exit" href="#">X</a>
-				</div>
-				
-					  <!-- POP-BODY BEGINS HERE -->
-					 <div id="pop-body">
-					  <div id="row1">
-						  
-							<label>Task:</label>
-							<input type="text" name="" id="task-name" placeholder="Taskname">
-						  
-						  
-							<input type="date" name="" style="float:right;" placeholder="DueDate" id="task-due">
-							<label style="float:right;" id="due-label">Due Date:</label>
-						  
-					  </div>
-					  
-					  <div id="row2">
-						  <label>Task Type:</label><input type="text" name="" placeholder="Tasktype" id="task-type">
-						  
-							
-							<select style="float:right;" id="task-prio">
-							  <option>Top</option>
-							  <option>Middle</option>
-							  <option>Last</option>
-							</select>
-							<label style="float:right;" id="prio-label">Priority:</label>
-						  
-					  </div>
-					  <div id="row3">
-							<label>Description:</label><input type="text" name="" id="task-desc" placeholder="description">
-					  </div>
-					  <button type="submit" name="Submit" id="task-submit" value="Add">Add</button>
-		  </div>
-	  
-	  </form>  
-		  <!-- POPUP ends here -->
-			
 	</div> 
 	<!-- main-body ends here -->
+
+	<form action="" id="popup">
+		<div id="pop-head"> 
+			<p>Add Task</p>
+			<p id="pop-exit">X</p>
+		</div>
+
+			<div id="col1">
+				<div class="col1-div">
+					<label for="">Taskname:</label>
+					<input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name">
+				</div>
+				<div class="col1-div">
+					<label for="">Tasktype:</label>
+					<input type="text" style="margin-left:2em;width:34%;" placeholder="Tasktype" id="task-type">
+				</div>
+				<div class="col1-div" style="margin-bottom:0;">
+					<label for="">Description:</label>
+					<textarea name=""  cols="30" rows="10" style="height:28%;width:34%;padding-top:0;padding-bottom:0;" placeholder="Description" id="task-desc"></textarea>
+				</div>
+			</div>
+			<div id="col2">
+				<div class="col2-div" style="margin-bottom:2em;">
+					<label for="">Duedate:</label>
+					<input type="date" name="" style="width:15em;height:2em;" id="task-due">
+				</div>
+				<div class="col2-div">
+					<label for="">Priority:</label>
+					<select name=""  style="width:15em;height:2em;margin-top:2em;" id='task-prio'>
+						<option value="">Top</option>
+						<option value="">Middle</option>
+						<option value="">Low</option>
+					</select>
+				</div>
+			</div>  
+			<button id="task-submit" style="width:15em;height:2em;">Add+</button>
+	</form>
+
 	<div id="task-area"></div>
 	
 	<script type="text/javascript" src="script.js"></script>

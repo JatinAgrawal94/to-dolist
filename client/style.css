@@ -36,7 +36,7 @@ nav{
 	height:5em;
 	z-index:5;
 	float: left;
-	background-color: transparent;
+	background-color: rgb(41,41,41) ;
 }
 #navbut{
 	position:relative;
@@ -73,7 +73,7 @@ nav{
 #main-body{
 	display: flex;
 	flex-direction: column;
-	position: relative;
+	position:fixed;
 	z-index: 3;
 	background-color: rgb(17,17,17);
 }
@@ -200,104 +200,75 @@ nav{
 }
 
 /*POPUP BEGINS HERE*/
-
 #popup{
-	width:83%;
-	height:37em;
-	z-index:50;
-	background-color: white;
-	border:2px solid black;
-	position:absolute;
-	top:7em;
-	left:10%;
-	display: none;
-	margin:0;
+    position: absolute;
+    z-index:10;
+    left:8%;
+    top:15%;
+    width:85%;
+    height:32em;
+    background-color:gray;
+    border: 2px solid black;
+    display:none;
 }
-        /* popup heading */
+
 #pop-head{
-    float: left;
     width:100%;
-    margin-top:0;
-    border-bottom:0.2rem solid black;
-    height:2.3em;
-    background-color: red   ;
+    background-color:red;
+    text-align:center;
+    margin:0;
 }
-#heading{
-    float: left;
+
+#pop-head p{
+    display: inline-block;
     font-size: 25px;
-    margin-top:0.05rem;
-    margin-left:45%;
+    margin-top:2px;
+    margin-bottom:4px;
 }
+
 #pop-exit{
     float: right;
-    font-size: 25px;
-    text-decoration: none;
-    color:black;
+    padding-right:5px;
     font-family:Arial, Helvetica, sans-serif;
-	border-radius:50%;
-    padding:0.1rem 0.5rem;
+    border-radius:50%;
     margin-top:0;
+    padding:0 0.4rem;    
+	margin-right:0.5rem;
+	cursor: pointer;
 }
+
 #pop-exit:hover{
     background-color: rgb(221,221,221);
 }
 
-#pop-body{
-    font-size:20px;
-    padding-left:3em;
-    padding-right:3em;
-    margin-top:5em;
+
+#col1{
+    width:50%;
+    display: block;
+    padding-top:2em;  
+    float:left;  
 }
-#row1,#row2{
-    margin-top:3em;
-    margin-bottom: 3em;
+#col2{
+    width:50%;
+    margin:0;
+    float:left;
+    height:60%;
 }
 
-#row1 input,#row2 input{
-    width: 23%;
-    height:3em;
+.col1-div{
+    margin-left:2%;
+    font-size: 25px;
+    margin-bottom:2em;
 }
-
-#row3 input{
-    width:23%;
-    height:7em;
-}
-
-#row2 select{
-    width:23%;
-    height:3em;
-    margin-right:5em;
-    margin-left:2em;
-}
-
-#task-name{
-    margin-left:4em;
-}
-
-#task-due{
-    margin-right:5em;
-    margin-left:2em;
-}
-#due-label{
-    margin-top:0.5rem;
-}
-
-#task-type{
-    margin-left:1em;
-}
-/* 
-#task-desc{
-
-} */
-
-#prio-label{
-    margin-top:.2em;
-}
-
-#task-submit{
-    width:25em;
+.col1-div input{
     height:2em;
-    margin-left:41%;
+}
+
+.col2-div{
+    font-size:25px;
+    margin-left:2em;
+    padding-top:1em;
+    margin-left:2%;
 }
 
 			/*  POPUP ENDS HERE*/
@@ -309,6 +280,6 @@ nav{
 	z-index:0;
 	position:relative;
 	padding:2em 1em;
-	top:36%;
+	top:16em;
 	overflow-x: hidden;
 }

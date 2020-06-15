@@ -21,26 +21,28 @@ var taskDue=document.getElementById('task-due')
 var taskType=document.getElementById('task-type')
 var taskPrio=document.getElementById('task-prio')
 var taskDesc=document.getElementById('task-desc')
-
 // intialisation of popup fields
 taskName.value=""
-taskDue.value=""
 taskType.value=""
-taskDesc.value=""
+
 
 var taskSubmit=document.getElementById('task-submit')
 var taskArea=document.getElementById('task-area')
+
+taskName.addEventListener('keyup',addKeyPress,false);
+taskDue.addEventListener('keyup',addKeyPress,false);
+taskType.addEventListener('keyup',addKeyPress,false);	
+taskPrio.addEventListener('keyup',addKeyPress,false);
+taskDesc.addEventListener('keyup',addKeyPress,false);
 
 
 addTask.addEventListener('click',()=>{   // addtask button listener
 	popUp.style="display:block;"
 })
 
-popExit.addEventListener('click',()=>{  //popup exit button
+popExit.addEventListener('click',()=>{
 	popUp.style="display:none;"
 })
-
-
 
 navBut.addEventListener('click',()=>{
 
@@ -59,7 +61,7 @@ navBut.addEventListener('click',()=>{
 taskSubmit.addEventListener('click',()=>{
 
 	var box=document.createElement('div');
-	box.style="float:left;background-color:yellow;width:98%;height:4em;border:2px solid black;margin-top:1em;"
+	box.style="float:left;background-color:yellow;width:98%;height:4em;border:2px solid black;margin-top:1em;display:flex;"
 	
 	 var check=document.createElement('input');
 	 check.setAttribute('type','checkbox');
@@ -74,7 +76,7 @@ taskSubmit.addEventListener('click',()=>{
 	tname.textContent=taskName.value;
 
 	var tstatus=document.createElement('select')
-	tstatus.style=" margin-top:1.3em;margin-left:3em;font-size: 16px;width:19%;text-align:center;"
+	tstatus.style="margin-left:3em;font-size: 16px;width:19%;text-align:center;height:2em;margin-top:1em;"
 	var options=["Not Started","In progress","In Review","Completed","Cancelled"];
 
 	for(let i=0;i<5;i++)
@@ -87,11 +89,11 @@ taskSubmit.addEventListener('click',()=>{
 
 	var due=document.createElement('input');
 	due.setAttribute('type','date');
-	due.style="margin-left:4em;font-size: 15px;width:20%;text-align:center;"
+	due.style="margin-left:4em;font-size: 15px;width:20%;text-align:center;height:2em;margin-top:1em;"
 	due.value=taskDue.value;
 
 	var priority=document.createElement('select')
-	priority.style=" margin-left:4em;font-size: 15px;width:19%;text-align:center;"
+	priority.style=" margin-left:4em;font-size: 15px;width:19%;text-align:center;height:2em;margin-top:1em;"
 	
 	
 	var prio=["Top","Middle","Last"];
@@ -128,24 +130,39 @@ function taskValue(number){  //function to control the value of taskId
 	return number;
 }
 
-function checkKeyPress(event)
+
+function addKeyPress(event)
 {
 	if(event.code === "Enter"){
 		event.preventDefault();
-		button.click();
+		taskSubmit.click();
 	}
 }
 
-/*
-var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
-
-*/
+function fieldCondition()
+{
+	let c=0;
+	if(taskName.value=="")
+	{
+		taskName.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
+		c++;
+	}
+	if(taskDue.value=="")
+	{
+		taskDue.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
+		c++;
+	}
+	if(taskType.value=="")
+	{
+		taskType.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
+		c++;
+	}
+	if(taskDesc.value=="")
+	{
+		taskDesc.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
+		c++;
+	}
+	
+	return (c>1);
+}
