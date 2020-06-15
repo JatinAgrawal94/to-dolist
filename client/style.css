@@ -27,14 +27,14 @@ nav{
 	background-color: rgb(41,41,41);
 	border-bottom:0.15em solid rgb(221,221,221); 
 	position: fixed;
-	z-index:0;
+	z-index:5;
 }
 
 #navstill{
 	position: fixed;
 	width:15em;
 	height:5em;
-	z-index:5;
+	z-index:9;
 	float: left;
 	background-color: rgb(41,41,41) ;
 }
@@ -42,15 +42,15 @@ nav{
 	position:relative;
 	z-index:5;	
 	margin-left:0.8em;
-	margin-top:0.5rem;
+	margin-top:0.7rem;
 	margin-right: 0;
 	float:left;
 	display: block;
 	padding:0;
 }
 #nav-span{
-	background-color:black;
-	height:0.4rem;
+	background-color:white;
+	height:0.3rem;
 	width:1em;
 	font-size: 2em;
 	margin-top:0.5rem;
@@ -74,7 +74,7 @@ nav{
 	display: flex;
 	flex-direction: column;
 	position:fixed;
-	z-index: 3;
+	z-index: 5;
 	background-color: rgb(17,17,17);
 }
 				/* SEARCH BOX CSS BEGINS HERE*/
@@ -85,7 +85,7 @@ nav{
 	height:2.5em;
 	background-color: rgb(241,241,241);
 	top:5.2em;
-	z-index: 1;
+	z-index: 5;
 	position: fixed;
 	border:0.1rem solid blue;
 	font-size:1em;
@@ -102,7 +102,7 @@ nav{
 #sidebar{
 	width:15%;
 	height:100%;
-	z-index:3;
+	z-index:7;
 	position:fixed;
 	background-color: rgb(17,17,17);
 	transition: all 500ms linear;
@@ -132,7 +132,7 @@ nav{
 			/*  FILTER BAR BEGINS HERE*/
 #filter-bar{
 	position: fixed;
-	z-index:1;
+	z-index:5;
 	top:8em;
 	float:left;
 	width:100%;
@@ -163,7 +163,7 @@ nav{
 
 		/*  ADD TASK BEGINS HERE*/
 #add{
-	z-index:1;
+	z-index:5;
 	width:99.5%;
 	position:fixed;
 	background-color: rgb(245,245,245);
@@ -189,7 +189,7 @@ nav{
 	height:2em;
 	background-color: #9933FF;
 	float:left;
-	z-index: 1;
+	z-index: 5;
 	display: flex;
 	padding: 0;
 }
@@ -276,7 +276,7 @@ nav{
 #task-area{
 	width:97.5%;
 	height:100%;
-	background-color: green;
+	background-color: rgb(17,17,17);
 	z-index:0;
 	position:relative;
 	padding:2em 1em;
