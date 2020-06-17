@@ -47,7 +47,7 @@
 	</div> 
 	<!-- main-body ends here -->
 
-	<form action="" id="popup">
+	<form action="/addtask" id="popup" method="POST">
 		<div id="pop-head"> 
 			<p>Add Task</p>
 			<p id="pop-exit">X</p>
@@ -56,32 +56,32 @@
 			<div id="col1">
 				<div class="col1-div">
 					<label for="">Taskname:</label>
-					<input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name">
+					<input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name" name="taskname">
 				</div>
 				<div class="col1-div">
 					<label for="">Tasktype:</label>
-					<input type="text" style="margin-left:2em;width:34%;" placeholder="Tasktype" id="task-type">
+					<input type="text" style="margin-left:2em;width:34%;" placeholder="Tasktype" id="task-type" name="tasktype">
 				</div>
 				<div class="col1-div" style="margin-bottom:0;">
 					<label for="">Description:</label>
-					<textarea name=""  cols="30" rows="10" style="height:28%;width:34%;padding-top:0;padding-bottom:0;" placeholder="Description" id="task-desc"></textarea>
+					<textarea cols="30" rows="10" style="height:28%;width:34%;padding-top:0;padding-bottom:0;" placeholder="Description" id="task-desc" name="task-Description"></textarea>
 				</div>
 			</div>
 			<div id="col2">
 				<div class="col2-div" style="margin-bottom:2em;">
 					<label for="">Duedate:</label>
-					<input type="date" name="" style="width:15em;height:2em;" id="task-due">
+					<input type="date" name="task-duedate" style="width:15em;height:2em;" id="task-due">
 				</div>
 				<div class="col2-div">
 					<label for="">Priority:</label>
-					<select name=""  style="width:15em;height:2em;margin-top:2em;" id='task-prio'>
-						<option value="">Top</option>
-						<option value="">Middle</option>
-						<option value="">Low</option>
+					<select name="task-priority"  style="width:15em;height:2em;margin-top:2em;" id='task-prio'>
+						<option value="Top">Top</option>
+						<option value="Middle">Middle</option>
+						<option value="Low">Low</option>
 					</select>
 				</div>
 			</div>  
-			<button id="task-submit" style="width:15em;height:2em;">Add+</button>
+			<button id="task-submit" style="width:15em;height:2em;" type="submit">Add+</button>
 	</form>
 
 	<div id="task-area"></div>

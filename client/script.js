@@ -34,7 +34,7 @@ taskDue.addEventListener('keyup',addKeyPress,false);
 taskType.addEventListener('keyup',addKeyPress,false);	
 taskPrio.addEventListener('keyup',addKeyPress,false);
 taskDesc.addEventListener('keyup',addKeyPress,false);
-
+var checkBox;
 
 addTask.addEventListener('click',()=>{   // addtask button listener
 	popUp.style="display:block;"
@@ -55,7 +55,6 @@ navBut.addEventListener('click',()=>{
 	}
 	
 })
-
 
 
 taskSubmit.addEventListener('click',()=>{
@@ -114,6 +113,7 @@ taskSubmit.addEventListener('click',()=>{
 	taskArea.appendChild(box);
 	popUp.style="display:none;"
 	TASKID++;
+	console.log(box.id)
 })
 
 // addTask.addEventListener('keyup',checkKeyPress,false);	
@@ -139,30 +139,3 @@ function addKeyPress(event)
 	}
 }
 
-
-function fieldCondition()
-{
-	let c=0;
-	if(taskName.value=="")
-	{
-		taskName.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
-		c++;
-	}
-	if(taskDue.value=="")
-	{
-		taskDue.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
-		c++;
-	}
-	if(taskType.value=="")
-	{
-		taskType.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
-		c++;
-	}
-	if(taskDesc.value=="")
-	{
-		taskDesc.style="-webkit-box-shadow: 0 0 10px red;box-shadow: 0 0 10px red;"
-		c++;
-	}
-	
-	return (c>1);
-}
