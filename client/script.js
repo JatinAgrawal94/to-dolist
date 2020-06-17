@@ -36,6 +36,7 @@ taskPrio.addEventListener('keyup',addKeyPress,false);
 taskDesc.addEventListener('keyup',addKeyPress,false);
 var checkBox;
 
+
 addTask.addEventListener('click',()=>{   // addtask button listener
 	popUp.style="display:block;"
 })
