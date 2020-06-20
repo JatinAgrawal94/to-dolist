@@ -1,4 +1,3 @@
-
 var sideBar=document.getElementById('sidebar')   //sidebar
 var navBut=document.getElementById('navbut') 	//navbar button
 var search=document.getElementById('search') 		// search bar
@@ -11,7 +10,11 @@ var addTask=document.getElementById('add')
 
 // task id values
 var TASKID=0;
-
+data={
+	taskid:"",
+	taskname:""
+}
+document.cookie="name="+TASKID;
 // Popup declarations
 var popUp=document.getElementById('popup')
 var popExit=document.getElementById('pop-exit')
@@ -22,9 +25,6 @@ var taskType=document.getElementById('task-type')
 var taskPrio=document.getElementById('task-prio')
 var taskDesc=document.getElementById('task-desc')
 // intialisation of popup fields
-taskName.value=""
-taskType.value=""
-
 
 var taskSubmit=document.getElementById('task-submit')
 var taskArea=document.getElementById('task-area')
@@ -35,11 +35,15 @@ taskType.addEventListener('keyup',addKeyPress,false);
 taskPrio.addEventListener('keyup',addKeyPress,false);
 taskDesc.addEventListener('keyup',addKeyPress,false);
 
+taskName.value=""
+taskType.value=""
+
 ///DECLARING LOCALSTORAGE FOR TASKS
 if(window.localStorage.getItem('todoarray')==undefined){
 	var todoarray=[]
 	window.localStorage.setItem("todoarray",JSON.stringify(todoarray))
 }
+
 var todoarray=JSON.parse(window.localStorage.getItem('todoarray'));
 
 addTask.addEventListener('click',()=>{   // addtask button listener
@@ -59,8 +63,7 @@ navBut.addEventListener('click',()=>{
 	}
 	else{
 		sideBar.style="display:block;";
-	}
-	
+	}	
 })
 
 						///SUBMIT TASK BUTTON///
@@ -74,14 +77,10 @@ taskSubmit.addEventListener('click',()=>{
 });
 	window.localStorage.setItem('todoarray',JSON.stringify(todoarray));
 	TASKID++;
+	document.cookie="name="+TASKID;
 })
 
 // addTask.addEventListener('keyup',checkKeyPress,false);	
-data={
-	taskid:"",
-	taskname:""
-}
-
 class bar{
 	constructor(data){
 		this.createBar(data);
@@ -197,3 +196,4 @@ for(let v=0;v<todoarray.length;v++)
 {
 	new bar(todoarray[v]);
 }
+
