@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="test.css">
     </head>
     <body>
-        <form action="" id="popup">
+        <form action="/addtask" id="popup" method="POST">
             <div id="pop-head"> 
                 <p>Add Task</p>
                 <p id="pop-exit">X</p>
@@ -15,7 +15,7 @@
                 <div id="col1">
                     <div class="col1-div">
                         <label for="">Taskname:</label>
-                        <input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name">
+                        <input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name" name="taskname">
                     </div>
                     <div class="col1-div">
                         <label for="">Tasktype:</label>

@@ -274,12 +274,12 @@ nav{
 			/*  POPUP ENDS HERE*/
 
 #task-area{
-	width:97.5%;
+	width:98%;
 	height:100%;
 	background-color: rgb(17,17,17);
 	z-index:0;
 	position:relative;
-	padding:2em 1em;
+	padding:2em 0.5em;
 	top:16em;
 	overflow-x: hidden;
 }
