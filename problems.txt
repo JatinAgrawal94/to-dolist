@@ -1,0 +1,9 @@
+tasks remaining
+1) the taskid value becomes 0 on refreshing the page
+2) making a database.
+3) adding profile to navbar
+4) adding contents to the sidebar.
+
+datbase is required to be desined like for fields.
+
+taskid,taskname,status,due-date, priority, tasktype, description,

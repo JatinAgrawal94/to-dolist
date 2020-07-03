@@ -8,13 +8,11 @@ var filterBar=document.getElementById('filter-bar')
 
 var addTask=document.getElementById('add')
 
-// task id values
-var TASKID=0;
 data={
 	taskid:"",
 	taskname:"",
 }
-document.cookie="name="+TASKID;
+
 // Popup declarations
 var popUp=document.getElementById('popup')
 var popExit=document.getElementById('pop-exit')
@@ -44,6 +42,7 @@ if(window.localStorage.getItem('todoarray')==undefined){
 	window.localStorage.setItem("todoarray",JSON.stringify(todoarray))
 }
 
+
 var todoarray=JSON.parse(window.localStorage.getItem('todoarray'));
 
 addTask.addEventListener('click',()=>{   // addtask button listener
@@ -66,23 +65,26 @@ navBut.addEventListener('click',()=>{
 	}	
 })
 
+
+
 						///SUBMIT TASK BUTTON///
 taskSubmit.addEventListener('click',()=>{
-	new bar({taskid:taskValue((TASKID).toString()),
+	var test=window.localStorage.getItem("task")
+	var go=taskValue(test);
+
+	new bar({taskid:go,
 		taskname:taskName.value.toString()});
 
 	todoarray.push({
-		taskid:taskValue(TASKID.toString()),
+		taskid:go,
 		taskname:taskName.value.toString()
-});
+	});
+	test++;
 	window.localStorage.setItem('todoarray',JSON.stringify(todoarray));
-	TASKID++;
-	document.cookie="name="+TASKID;
-	
-	
+	window.localStorage.setItem('task',test);
 })
 
-// addTask.addEventListener('keyup',checkKeyPress,false);	
+
 class bar{
 	constructor(data){
 		this.createBar(data);
@@ -153,7 +155,6 @@ class bar{
 			box.appendChild(priority);
 			taskArea.appendChild(box);
 			popUp.style="display:none;"
-
 		}
 
 		remove(box,id,data)
@@ -174,6 +175,7 @@ class bar{
 }
 
 function taskValue(number){  //function to control the value of taskId
+	
 	if(number<10)
 	{
 		number="00"+number;
@@ -197,7 +199,10 @@ function addKeyPress(event)
 	}
 }
 
+
+
 for(let v=0;v<todoarray.length;v++)
 {
 	new bar(todoarray[v]);
 }
+

@@ -41,7 +41,7 @@
 			<li style="padding-left:7%;width:5%;">Id</li>
 			<li style="padding-left:7%;width:14%;">Task</li>
 			<li style="padding-left:7%;width:14%;">Status</li>
-			<li style="padding-left:7%;width:17%;">Due-date</li>
+			<li style="padding-left:7%;width:17%;">Duedate</li>
 			<li style="padding-left:7%;">Priority</li>
 		</ul>
 	</div> 
@@ -52,40 +52,48 @@
 			<p>Add Task</p>
 			<p id="pop-exit">X</p>
 		</div>
-
-			<div id="col1">
-				<div class="col1-div">
+		
+		<div id="pop-body">
+			<div id="row">
+				<div class="element">
 					<label for="">Taskname:</label>
-					<input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name" name="taskname" required>
+					<input type="text" placeholder="Taskname" id="task-name" name="taskname" required>
 				</div>
-				<div class="col1-div">
+				<div class="element">
 					<label for="">Tasktype:</label>
-					<input type="text" style="margin-left:2em;width:34%;" placeholder="Tasktype" id="task-type" name="tasktype" required>
+					<input type="text" placeholder="Tasktype" id="task-type" name="tasktype" required>
 				</div>
-				<div class="col1-div" style="margin-bottom:0;">
+				
+			</div>
+			<div id="row" class="row2">
+				<div class="element desc">
 					<label for="">Description:</label>
-					<textarea cols="30" rows="10" style="height:28%;width:34%;padding-top:0;padding-bottom:0;" placeholder="Description" id="task-desc" name="task-Description" required></textarea>
+					<textarea name="description" cols="" rows="" placeholder="Description" id="task-desc"></textarea>
+				</div>
+			
+			
+				<div class="element">
+					<label for="">Duedate:</label>
+					<input type="date" name="task-due" id="task-due" required>
 				</div>
 			</div>
-			<div id="col2">
-				<div class="col2-div" style="margin-bottom:2em;">
-					<label for="">Duedate:</label>
-					<input type="date" name="task-duedate" style="width:15em;height:2em;" id="task-due" required>
-				</div>
-				<div class="col2-div">
+
+			<div id="row">
+				<div class="element">
 					<label for="">Priority:</label>
-					<select name="task-priority"  style="width:15em;height:2em;margin-top:2em;" id='task-prio'>
+					<select name="taskpriority" id='task-prio'>
 						<option value="Top">Top</option>
 						<option value="Middle">Middle</option>
 						<option value="Low">Low</option>
 					</select>
 				</div>
-			</div>  
-			<button id="task-submit" style="width:15em;height:2em;" type="submit">Add+</button>
+			</div>
+		   </div>  
+		   <button id="task-submit">Add+</button>
 	</form>
 
 	<div id="task-area"></div>
 	
 	<script type="text/javascript" src="script.js"></script>
 </body>
-</html>
+</html>	

@@ -11,36 +11,47 @@
                 <p>Add Task</p>
                 <p id="pop-exit">X</p>
             </div>
-
-                <div id="col1">
-                    <div class="col1-div">
+            
+            <div id="pop-body">
+                <div id="row">
+                    <div class="element">
                         <label for="">Taskname:</label>
-                        <input type="text" style="margin-left:1em;width:34%;" placeholder="Taskname" id="task-name" name="taskname">
+                        <input type="text" placeholder="Taskname" id="task-name" name="taskname" required>
                     </div>
-                    <div class="col1-div">
+                    <div class="element">
                         <label for="">Tasktype:</label>
-                        <input type="text" style="margin-left:2em;width:34%;" placeholder="Tasktype" id="task-type">
+                        <input type="text" placeholder="Tasktype" id="task-type" name="tasktype" required>
                     </div>
-                    <div class="col1-div" style="margin-bottom:0;">
+                    
+                </div>
+                <div id="row" class="row2">
+                    <div class="element desc">
                         <label for="">Description:</label>
-                        <textarea name="" id="" cols="30" rows="10" style="height:28%;width:34%;padding-top:0;padding-bottom:0;" placeholder="Description" id="task-desc"></textarea>
+                        <textarea name="description" cols="" rows="" placeholder="Description" id="task-desc"></textarea>
+                    </div>
+                
+                
+                    <div class="element">
+                        <label for="">Duedate:</label>
+                        <input type="date" name="task-due" id="task-due" required>
                     </div>
                 </div>
-                <div id="col2">
-                    <div class="col2-div" style="margin-bottom:2em;">
-                        <label for="">Duedate:</label>
-                        <input type="date" name="" id="" style="width:15em;height:2em;" id="task-due">
-                    </div>
-                    <div class="col2-div">
+
+                <div id="row">
+                    <div class="element">
                         <label for="">Priority:</label>
-                        <select name="" id="" style="width:15em;height:2em;margin-top:2em;" id='task-prio'>
-                            <option value="">Top</option>
-                            <option value="">Middle</option>
-                            <option value="">Low</option>
+                        <select name="" id="" id='task-prio'>
+                            <option value="Top">Top</option>
+                            <option value="Middle">Middle</option>
+                            <option value="Low">Low</option>
                         </select>
                     </div>
-                </div>  
-                <button id="task-submit" style="width:15em;height:2em;">Add+</button>
+                </div>
+
+               </div>  
+               <button id="task-submit">Add+</button>
+               
         </form>
+        
     </body>
 </html>
