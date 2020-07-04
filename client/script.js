@@ -2,10 +2,6 @@ var sideBar=document.getElementById('sidebar')   //sidebar
 var navBut=document.getElementById('navbut') 	//navbar button
 var search=document.getElementById('search') 		// search bar
 
-// filer bar declarations
-var filterLink=document.querySelectorAll('.filter-link') 
-var filterBar=document.getElementById('filter-bar') 
-
 var addTask=document.getElementById('add')
 
 data={
@@ -224,5 +220,3 @@ function searchEvent() /// function to search for a taskname
 		}
 	}
 }
-
-searchEvent();

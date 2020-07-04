@@ -129,45 +129,14 @@ nav{
 }
 
 			/* SIDE BAR CSS ENDS HERE*/
-			/*  FILTER BAR BEGINS HERE*/
-#filter-bar{
-	position: fixed;
-	z-index:5;
-	top:8em;
-	float:left;
-	width:100%;
-	background-color: rgb(17,17,17);
-	display: flex;
-}
-
-#filter-bar a{
-	z-index:1;
-	background-color: white;
-	font-size:1.5em;
-	padding-top:0.2%;
-	padding-bottom:0.2%;
-	color:black;
-	border:0.1em solid rgb(125,197,255);
-	border-radius:16px;
-	margin:0;
-	float: left;
-	width:33%;	
-	text-align: center;
-}
-
-#filter-bar a:hover
-{
-	background-color: rgb(235,246,265);
-}
-				/* FILTER BAR ENDS HERE*/
-
+			
 		/*  ADD TASK BEGINS HERE*/
 #add{
 	z-index:5;
 	width:99.5%;
 	position:fixed;
 	background-color: rgb(245,245,245);
-	top:8.7em;
+	top:7em;
 	color:black;
 	text-align: center;
 	padding-top:0.7em;
@@ -185,7 +154,7 @@ nav{
 #head-section{
 	position: fixed;
 	width:100%;
-	top:9.48em;
+	top:7em;
 	height:2em;
 	background-color: #9933FF;
 	float:left;
@@ -349,6 +318,6 @@ nav{
 	z-index:0;
 	position:relative;
 	padding:2em 0.5em;
-	top:16em;
+	top:12em;
 	overflow-x: hidden;
 }
