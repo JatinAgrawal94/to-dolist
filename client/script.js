@@ -65,7 +65,12 @@ search.addEventListener('keyup',searchEvent);
 
 						///SUBMIT TASK BUTTON///
 taskSubmit.addEventListener('click',()=>{
+	if(window.localStorage.getItem("task")==undefined)
+	{
+		window.localStorage.setItem("task","0");
+	}
 	var test=window.localStorage.getItem("task")
+
 	var go=taskValue(test);
 
 	new bar({taskid:go,
