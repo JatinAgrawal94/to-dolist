@@ -65,7 +65,7 @@ navBut.addEventListener('click',()=>{
 	}	
 })
 
-
+search.addEventListener('keyup',searchEvent);
 
 						///SUBMIT TASK BUTTON///
 taskSubmit.addEventListener('click',()=>{
@@ -94,7 +94,7 @@ class bar{
 
 			var box=document.createElement('div');
 			box.style="float:left;background-color:yellow;width:100%;height:4em;border:2px solid black;margin-top:1em;display:flex;"
-			box.classList.add('box');
+			box.className="box";
 
 			var check=document.createElement('input');
 			check.setAttribute('type','checkbox');
@@ -109,12 +109,15 @@ class bar{
 
 			var tid=document.createElement('p');
 			tid.style="float:left;margin-top:1rem;margin-left:1em;font-size:25px;"
+			tid.className="task-id";
 			tid.textContent=data.taskid
 			tid.value=data.taskid;
 
 			var tname=document.createElement('p');
 			tname.style="float:left;margin-top:1rem;margin-left:1em;font-size:25px;width:19%;text-align:center;";
 			tname.textContent=data.taskname;
+			tname.className="t-name"
+			tname.value=data.taskname;
 			
 
 			var tstatus=document.createElement('select')
@@ -169,7 +172,7 @@ class bar{
 				}
 			}
 			todoarray.splice(index,1);
-			window.localStorage.setItem('todoarray',JSON.stringify(todoarray));
+			window.localStorage.setItem('todoarray',JSON.stringify(todoarray));		
 		}
 
 }
@@ -199,10 +202,27 @@ function addKeyPress(event)
 	}
 }
 
-
-
 for(let v=0;v<todoarray.length;v++)
 {
 	new bar(todoarray[v]);
 }
 
+function searchEvent() /// function to search for a taskname 
+{
+	var box=document.getElementsByClassName('box')
+	var filter=search.value.toUpperCase();
+	for(let i=0;i<box.length;i++)
+	{
+		var tname=box[i].getElementsByClassName('t-name')[0];
+
+		if(tname.value.toUpperCase().indexOf(filter) > -1)
+		{
+			box[i].style.display=""
+		}
+		else{
+			box[i].style.display="none";
+		}
+	}
+}
+
+searchEvent();
